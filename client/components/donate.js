@@ -48,20 +48,20 @@ function donateView (state, emit) {
   function donateButtons () {
     return html`
       <ul class="list pl0">
-        <li class="dib mr2 mb2">
-          <a href="#" onclick=${() => { emit('checkout', 1000) }} class="f6 f5-ns b db pa3 link dim dark-gray ba b--black-20">$10</a>
+        <li class="dib mr3 mb2">
+          <a href="" onclick=${() => { emit('checkout', 1000) }} class="f6 f4-ns b db pv3 ph3 link dim dark-gray ba b--black-20">$10</a>
         </li>
-        <li class="dib mr2 mb2">
-          <a href="#" onclick=${() => { emit('checkout', 2500) }} class="f6 f5-ns b db pa3 link dim dark-gray ba b--black-20">$25</a>
+        <li class="dib mr3 mb2">
+          <a href="" onclick=${() => { emit('checkout', 2500) }} class="f6 f4-ns b db pv3 ph3 link dim dark-gray ba b--black-20">$25</a>
         </li>
-        <li class="dib mr2 mb2">
-          <a href="#" onclick=${() => { emit('checkout', 5000) }} class="f6 f5-ns b db pa3 link dim dark-gray ba b--black-20">$50</a>
+        <li class="dib mr3 mb2">
+          <a href="" onclick=${() => { emit('checkout', 5000) }} class="f6 f4-ns b db pv3 ph3 link dim dark-gray ba b--black-20">$50</a>
         </li>
-        <li class="dib mr2 mb2">
-          <a href="#" onclick=${() => { emit('checkout', 10000) }} class="f6 f5-ns b db pa3 link dim dark-gray ba b--black-20">$100</a>
+        <li class="dib mr3 mb2">
+          <a href="" onclick=${() => { emit('checkout', 10000) }} class="f6 f4-ns b db pv3 ph3 link dim dark-gray ba b--black-20">$100</a>
         </li>
-        <li class="dib mr2 mb2">
-          <a href="#" onclick=${() => { emit('checkout', 25000) }} class="f6 f5-ns b db pa3 link dim dark-gray ba b--black-20">$250</a>
+        <li class="dib mr3 mb2">
+          <a href="" onclick=${() => { emit('checkout', 25000) }} class="f6 f4-ns b db pv3 ph3 link dim dark-gray ba b--black-20">$250</a>
         </li>
       </ul>
     `

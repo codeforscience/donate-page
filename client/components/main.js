@@ -5,15 +5,15 @@ module.exports = donateView
 
 function donateView (state, emit) {
   return html`
-    <article class="cf ph3 ph5-ns pv5">
+    <article class="cf ph3 ph5-ns pv4">
       <header class="fn fl-ns w-50-l pr4-ns black-70">
         <h1 class="f3 mb3 mt0 lh-title">Support Technology for the Public Good</h1>
         <h2 class="f5 ttu tracked gray">
           Code for Science & Society
         </h2>
-        <div class="w-100 flex pv5">
-          <a href="http://datproject.org" title="Dat Project"><img src="/images/dat-logo.svg" style="height:200px; width:auto;" alt="dat project logo" class=""/></a>
-          <a href="http://codeforscience.org" title="CSS Website"><img src="/images/css-logo.png" style="height:200px; width:auto;" alt="code for science & society logo" class="pl4"/></a>
+        <div class="w-100 flex pv5-ns">
+          <a href="http://datproject.org" title="Dat Project"><img src="/images/dat-logo.png" style="height:auto; width:180px;" alt="dat project logo" class="pr5-ns pr2 dn db-ns"/></a>
+          <a href="http://codeforscience.org" title="CSS Website"><img src="/images/css-logo.png" style="height:auto; width:180px;" alt="code for science & society logo" class="dn db-ns"/></a>
         </div>
       </header>
       <div class="fn fl-ns w-50-l">

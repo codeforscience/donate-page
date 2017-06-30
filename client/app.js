@@ -48,28 +48,28 @@ function loadStripeCheckout (state, emitter) {
 }
 
 function handleDonate (state, emitter) {
-  state.checkout ={
-    amount: 500, // default donation
-    success: null,
-    error: null,
-    pending: false
-  }
+  state.checkout = {}
 
   emitter.on('checkout', function (amount) {
-    state.checkout.pending = true
+    state.checkout = Object.assign(state.checkout, {
+      amount: amount,
+      // force reset vals
+      success: null,
+      error: null,
+      pending: true
+    })
+    emitter.emit('log:info', state.checkout)
     emitter.emit('render')
 
     if (!state.stripeLoaded) {
       emitter.once('stripeLoaded', function () {
-        emitter.emit('checkout')
+        emitter.emit('checkout', amount)
       })
       return
     }
 
-    if (amount) state.checkout.amount = amount
-
     // StripeCheckout is loaded as global variable with checkout.js
-    var checkoutHandler = StripeCheckout.configure({
+    var checkoutHandler = window.StripeCheckout.configure({
       key: state.stripeKey,
       locale: 'auto'
     })
@@ -81,7 +81,6 @@ function handleDonate (state, emitter) {
       panelLabel: 'Donate',
       amount: state.checkout.amount,
       billingAddress: true,
-      zipCode: true,
       closed: function () {
         if (!state.checkout.chargePending) {
           state.checkout.pending = false
@@ -101,7 +100,7 @@ function handleDonate (state, emitter) {
       headers: { 'Content-Type': 'application/json' }
     }, function (err, resp, body) {
       state.checkout.pending = false
-      state.checkout.chargePending = true
+      state.checkout.chargePending = false
       if (err || resp.statusCode !== 200) {
         state.checkout.error = body.error || 'Error processing donation'
         emitter.emit('log:error', body.error)

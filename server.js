@@ -42,7 +42,7 @@ app.post('/charge', (req, res) => {
     }))
   .then(charge => res.send(charge))
   .catch(err => {
-    console.log('Error:', err)
+    console.error('Stripe Processing Error:', err)
     if (err.type === 'StripeCardError') {
       return res.status(402).send({error: err.message})
     }
