@@ -5,7 +5,8 @@
   "author": "Joe Hand <joe@hand.email>",
   "scripts": {
     "dev": "node server.js & bankai build client/app.js public/ -w",
-    "start": "bankai build client/app.js public/ --optimize && node server.js"
+    "build": "bankai build client/app.js public/ --optimize",
+    "start": "node server.js"
   },
   "keywords": [],
   "license": "MIT",

@@ -3,6 +3,7 @@ const Stripe = require('stripe')
 const bodyParser = require('body-parser')
 const config = require('./lib/config')
 
+const port = config.port || process.env.PORT
 const secretKey = config.stripe && config.stripe.keySecret ? config.stripe.keySecret : process.env.SECRET_KEY
 const publicKey = config.stripe && config.stripe.keyPublishable ? config.stripe.keyPublishable : process.env.PUBLISHABLE_KEY
 
@@ -51,6 +52,6 @@ app.post('/charge', (req, res) => {
   })
 })
 
-app.listen(config.port, () => {
-  console.log(`app started on http://127.0.0.1:${config.port}`)
+app.listen(port, () => {
+  console.log(`app started on http://127.0.0.1:${port}`)
 })
