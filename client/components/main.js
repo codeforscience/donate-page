@@ -21,7 +21,7 @@ function donateView (state, emit) {
           <strong>Code for Science & Society</strong> (CSS) supports and builds open source projects with a focus on science, government, and journalism. Our primary initiative is the <a href="http://datproject.org">Dat Project</a>. We also host other open source science programs such as <a href="http://sciencefair-app.com/">Science Fair</a> and <a href="http://stenci.la">Stencila</a>.
         </p>
         <p class="lh-copy measure f5 black-70">
-          <strong>Why Donate?</strong> Primary funding for CSS comes through grants. Donations shows current and future funders that people support our work. This will help us get grants in the future. Even small donations are great!
+          <strong>Why Donate?</strong> Primary funding for CSS comes through grants. Donations and community support help us get grants in the future. Even small donations are great!
         </p>
         <p class="lh-copy measure f5 black-70">
           <strong>What is my money spent on?</strong> 100% of your money directly supports folks producing open source software and building our community. Our employee headcount and salaries depend on our active grants. We have very little overhead and all earn the same amount of money. If you want your money to go to a specific project, please let us know! We love to hear what you are interested in.
