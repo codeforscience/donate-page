@@ -38,6 +38,7 @@ app.post('/charge', (req, res) => {
     stripe.charges.create({
       amount: req.body.amount,
       description: 'Donation to Code for Science & Society',
+      receipt_email: customer.email,
       currency: 'usd',
       customer: customer.id
     }))

@@ -5,7 +5,7 @@
   "author": "Joe Hand <joe@hand.email>",
   "scripts": {
     "dev": "node server.js & bankai build client/app.js public/ -w",
-    "build": "bankai build client/app.js public/ --optimize",
+    "build": "bankai build client/app.js public/",
     "start": "node server.js"
   },
   "keywords": [],
