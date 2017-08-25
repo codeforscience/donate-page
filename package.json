@@ -19,6 +19,7 @@
     "load-script2": "^1.0.0",
     "sheetify": "^6.1.0",
     "stripe": "^4.23.1",
+    "stripe-dat": "^1.0.1",
     "tachyons": "^4.7.4",
     "xhr": "^2.4.0"
   },
