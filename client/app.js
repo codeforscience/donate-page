@@ -8,6 +8,8 @@ var main = require('./components/main')
 var footer = require('./elements/footer')
 
 css('tachyons')
+css('dat-colors')
+css('./app.css')
 
 var app = choo()
 app.use(log())
@@ -19,7 +21,7 @@ app.mount('body')
 
 function mainView (state, emit) {
   return html`
-    <body class="sans-serif">
+    <body class="color-neutral">
       ${main(state, emit)}
       ${footer()}
     </body>
@@ -50,6 +52,15 @@ function loadStripeCheckout (state, emitter) {
 function handleDonate (state, emitter) {
   state.checkout = {}
 
+  emitter.on('toggleBitcoinView', function () {
+    state.bitcoinView = !state.bitcoinView
+    emitter.emit('render')
+  })
+  emitter.on('toggleValInput', function () {
+    state.showValInput = !state.showValInput
+    emitter.emit('render')
+  })
+
   emitter.on('checkout', function (amount) {
     state.checkout = Object.assign(state.checkout, {
       amount: amount,
@@ -75,10 +86,11 @@ function handleDonate (state, emitter) {
     })
     checkoutHandler.open({
       name: 'Code for Science & Society',
-      description: 'Donation to Dat Project',
+      description: `$${state.checkout.amount/100} Donation to Dat Project`,
       image: 'images/dat-logo.svg',
       token: handleCharge,
       panelLabel: 'Donate',
+      bitcoin: true,
       amount: state.checkout.amount,
       billingAddress: true,
       closed: function () {
