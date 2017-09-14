@@ -6,16 +6,17 @@ function donateView (state, emit) {
   var donateProcessed = state.checkout.pending || (state.checkout.success || state.checkout.error)
   return html`
     <div>
-      <h5 class="f4 mv0 color-neutral-80">Donate via Stripe (Tax-Deductible)</h5>
+      <h5 class="f4 mv0 color-neutral-80">Donate via Stripe (tax-deductible)</h5>
       <h6 class="f6 mv1 color-neutral-60">We accept credit cards or Bitcoin</a>
       ${donateButtons()}
       <p class="lh-copy f7 black-60 measure">
         Donations are processed via Stripe (per transation: CC, 2.2% + $0.30; Bitcoin, 0.8% cap at $5). We receive donation in USD minus fees.
       </p>
       ${donateProcessed ? donateResults() : ''}
+      <h5 class="f4 mb2 color-neutral-80">Donate Anonymous Bitcoin (not tax-deductible)</h5>
       ${donateBitcoin()}
       <p class="lh-copy f7 black-60 measure">
-        Anonymous Bitcoin donations are not tax deducible. Bitcoins are sent directly to our wallet.
+        Anonymous Bitcoin donations are not tax deducible. Bitcoins sent via Coinbase are sent directly to our wallet.
       </p>
     </div>
   `
@@ -57,7 +58,7 @@ function donateView (state, emit) {
   function donateBitcoin () {
     return html`
       <div class="">
-        <a class="mt2 f6 f4-ns tc b dib pv3 ph3 link dim color-neutral-80 ba b--green" href="https://www.coinbase.com/checkouts/ae8b9832ff5ebc3be45ba9b8cdd3f19b" target="_blank">Donate Bitcoin Anonymously</a>
+        <a class="mt2 f6 f4-ns tc b dib pv3 ph3 link dim color-neutral-80 ba b--green" href="https://www.coinbase.com/checkouts/ae8b9832ff5ebc3be45ba9b8cdd3f19b" target="_blank">Via Coinbase</a>
       </div>
     `
   }
