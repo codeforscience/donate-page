@@ -18,7 +18,7 @@ function donateView (state, emit) {
       </header>
       <div class="fn fl-ns w-50-l">
         <p class="lh-copy measure f5 mt4 mt0-ns ">
-          <strong>Code for Science & Society</strong> (CSS) supports and builds open source projects with a focus on science, government, and journalism. Our primary initiative is the <a class="color-green link dim" href="http://datproject.org">Dat Project</a>. We also host other open source science programs such as <a class="color-green link dim" href="http://sciencefair-app.com/">Science Fair</a> and <a class="color-green link dim" href="http://stenci.la">Stencila</a>.
+          <strong>Code for Science & Society</strong> (CSS), a registered US 501(c)(3), supports and builds open source projects with a focus on science, government, and journalism. Our primary initiative is the <a class="color-green link dim" href="http://datproject.org">Dat Project</a>. We also host other open source science programs such as <a class="color-green link dim" href="http://sciencefair-app.com/">Science Fair</a> and <a class="color-green link dim" href="http://stenci.la">Stencila</a>.
         </p>
         <p class="lh-copy measure f5  ">
           <strong>Why Donate?</strong> Primary funding for CSS comes through grants. Donations and community support help us get grants in the future. Even small donations are great!
