@@ -25,7 +25,7 @@ const sDat = StripeDat(secretKey, storage, {
     return charge.description.indexOf('Donation to') > -1
   },
   anonymize: true,
-  fee: { pct: 0.022, amt: 0.3} // nonprofit fees =)
+  fee: { pct: 0.022, amt: 0.3 } // nonprofit fees =)
 })
 
 app.use(express.static('public'))
