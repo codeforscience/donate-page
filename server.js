@@ -40,7 +40,11 @@ app.post('/charge', (req, res) => {
       description: 'Donation to Code for Science & Society',
       receipt_email: customer.email,
       currency: 'usd',
-      customer: customer.id
+      customer: customer.id,
+      metadata: {
+        donation: true,
+        source: 'donate.datproject.org'
+      }
     }))
   .then(charge => res.send(charge))
   .catch(err => {
