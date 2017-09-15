@@ -91,7 +91,7 @@ function donateView (state, emit) {
     return html`
       <form class="mv3 cf" onsubmit=${(e) => submitOther(e)}>
         <label for="donate-amount" class="f6 f4-ns input-reset ba b--green fl b color-neutral-80 br-0 bg-neutral-04 pa3 br2 br--left">$</label>
-        <input class="f6 f4-ns input-reset ba b--green fl color-neutral bg-white pa3 lh-solid w-50 bl-0 br-0 outline-0" placeholder="Donation Amount" type="text" name="donate-amount" value="${state.checkout.amount ? state.checkout.amount/100 : ''}" id="donate-amount" />
+        <input class="f6 f4-ns input-reset ba b--green fl color-neutral bg-white pa3 w-50 bl-0 br-0 outline-0" placeholder="Donation Amount" type="text" name="donate-amount" value="${state.checkout.amount ? state.checkout.amount/100 : ''}" id="donate-amount" />
         <input class="f6 f4-ns button-reset b--green ba fl pv3 tc bg-animate bg-green hover-bg-green-hover white pointer w-20 br2 br--right outline-0" type="submit" onclick=${(e) => submitOther() } value="Donate" />
       </form>
     `
