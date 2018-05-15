@@ -58,7 +58,7 @@ function donateView (state, emit) {
   function donateBitcoin () {
     return html`
       <div class="">
-        <a class="mt2 f6 f4-ns tc b dib pv3 ph3 link dim color-neutral-80 ba b--green" href="https://www.coinbase.com/checkouts/ae8b9832ff5ebc3be45ba9b8cdd3f19b" target="_blank">Via Coinbase</a>
+        <a class="mt2 f6 f4-ns tc b dib pv3 ph3 link dim color-neutral-80 ba b--green" href="https://commerce.coinbase.com/checkout/6a75d1a9-f951-4478-9008-49f6aba82304" target="_blank">Via Coinbase</a>
       </div>
     `
   }
