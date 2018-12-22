@@ -7,7 +7,6 @@ var main = require('./components/main')
 var footer = require('./elements/footer')
 
 css('tachyons')
-css('dat-colors')
 css('./app.css')
 
 var app = choo()

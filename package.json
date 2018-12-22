@@ -4,19 +4,17 @@
   "version": "1.0.0",
   "author": "Joe Hand <joe@hand.email>",
   "scripts": {
-    "dev": "node server.js & bankai build client/app.js public/",
+    "dev": "npm run build && npm run start",
     "build": "bankai build client/app.js public/",
     "start": "node server.js"
   },
   "keywords": [],
   "license": "MIT",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "body-parser": "^1.18.3",
     "choo": "^6.13.1",
     "choo-devtools": "^2.5.1",
-    "choo-log": "^8.0.0",
-    "dat-colors": "^3.5.1",
     "express": "^4.16.4",
     "load-script2": "^1.0.1",
     "sheetify": "^7.3.3",
