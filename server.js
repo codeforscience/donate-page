@@ -43,7 +43,7 @@ app.post('/charge', (req, res) => {
       customer: customer.id,
       metadata: {
         donation: true,
-        source: 'donate.datproject.org'
+        source: 'donate.codeforscience.org'
       }
     }))
   .then(charge => res.send(charge))

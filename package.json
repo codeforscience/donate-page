@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Joe Hand <joe@hand.email>",
   "scripts": {
-    "dev": "node server.js & bankai build client/app.js public/ -w",
+    "dev": "node server.js & bankai build client/app.js public/",
     "build": "bankai build client/app.js public/",
     "start": "node server.js"
   },
@@ -12,27 +12,28 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "choo": "^6.0.0",
-    "choo-log": "^6.1.2",
+    "body-parser": "^1.18.3",
+    "choo": "^6.13.1",
+    "choo-devtools": "^2.5.1",
+    "choo-log": "^8.0.0",
     "dat-colors": "^3.5.1",
-    "express": "^4.15.3",
-    "load-script2": "^1.0.0",
-    "sheetify": "^6.1.1",
-    "stripe": "^4.23.1",
-    "tachyons": "^4.7.4",
-    "xhr": "^2.4.0"
+    "express": "^4.16.4",
+    "load-script2": "^1.0.1",
+    "sheetify": "^7.3.3",
+    "stripe": "^6.20.0",
+    "tachyons": "^4.11.1",
+    "xhr": "^2.5.0"
   },
   "devDependencies": {
-    "bankai": "^8.1.1",
-    "standard": "*"
+    "bankai": "^9.15.0",
+    "standard": "^12.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/joehand/donate-css.git"
+    "url": "https://github.com/codeforscience/donate-page.git"
   },
   "bugs": {
-    "url": "https://github.com/joehand/donate-css/issues"
+    "url": "https://github.com/codeforscience/donate-page/issues"
   },
-  "homepage": "https://github.com/joehand/donate-css"
+  "homepage": "https://github.com/codeforscience/donate-page"
 }

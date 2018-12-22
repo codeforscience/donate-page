@@ -1,6 +1,5 @@
 var html = require('choo/html')
 var choo = require('choo')
-var log = require('choo-log')
 var css = require('sheetify')
 var load = require('load-script2')
 var xhr = require('xhr')
@@ -12,7 +11,9 @@ css('dat-colors')
 css('./app.css')
 
 var app = choo()
-app.use(log())
+if (process.env.NODE_ENV !== 'production') {
+  app.use(require('choo-devtools')())
+}
 app.use(loadStripeCheckout)
 app.use(handleDonate)
 app.route('/', mainView)
@@ -86,7 +87,7 @@ function handleDonate (state, emitter) {
     })
     checkoutHandler.open({
       name: 'Code for Science & Society',
-      description: `$${state.checkout.amount/100} Donation to Dat Project`,
+      description: `$${state.checkout.amount/100} Donation to Code for Science & Society`,
       image: 'images/dat-logo.svg',
       token: handleCharge,
       panelLabel: 'Donate',
