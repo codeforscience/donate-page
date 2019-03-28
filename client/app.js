@@ -12,6 +12,10 @@ css('./app.css')
 var app = choo()
 if (process.env.NODE_ENV !== 'production') {
   app.use(require('choo-devtools')())
+} else {
+ app.use(() => {
+   if (window.location.host === 'donate.datproject.org') return window.location = 'https://opencollective.com/dat'
+ })
 }
 app.use(loadStripeCheckout)
 app.use(handleDonate)
