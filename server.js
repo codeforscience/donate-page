@@ -14,6 +14,10 @@ if (!secretKey) {
 const app = express()
 const stripe = Stripe(secretKey)
 
+app.use((req, res, next) => {
+  if (req.hostname === 'datproject.org') return res.redirect('https://opencollective.com/dat')
+  next()
+})
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
