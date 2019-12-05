@@ -1,0 +1,6 @@
+{
+  "env": {
+    "PUBLISHABLE_KEY": "@publishable_key",
+    "SECRET_KEY": "@secret_key"
+  }
+}

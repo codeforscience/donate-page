@@ -37,11 +37,11 @@ function loadStripeCheckout (state, emitter) {
     if (err) return emitter.emit('log:error', err)
 
     xhr({
-      uri: '/stripe-key',
+      uri: '/api/stripe-key',
       json: true
     }, function (err, resp, body) {
       emitter.emit('log:debug', body)
-      if (err || resp.statusCode !== 200) {
+      if (err || resp.statusCode !== 200 || !body.key) {
         return emitter.emit('log:error', 'Error loading stripe')
       }
 
@@ -109,7 +109,7 @@ function handleDonate (state, emitter) {
   function handleCharge (token) {
     state.checkout.chargePending = true
     xhr({
-      uri: '/charge',
+      uri: '/api/charge',
       method: 'POST',
       body: { token: token, amount: state.checkout.amount },
       json: true,
