@@ -5,22 +5,16 @@ donate page for code for science & society
 Features:
 
 * Donate via Stripe
-* Simple express server to handle payments
+* Use Now functions to handle payments
 
 ## Development
 
-* `npm run dev` to run server and watch client javascript files + rebuild automatically
-* `npm start` to build and run server for production
+* `npm run dev` to run server and watch client javascript files
+
 
 ### Config
 
-Copy the config file to `config.yml`:
-
-```
-cp example.config.yml config.yml
-```
-
-And set your stripe keys. You can also set the stripe keys as environment variables:
+Set your stripe keys as secrets using `now secrets`.
 
 ```
 process.env.SECRET_KEY
