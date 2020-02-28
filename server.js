@@ -16,7 +16,7 @@ app.get('/ping', function(request, response) {
 
 const errToJSON = ({name, message, stack}) => ({name, message, stack})
 
-app.post("api/payment_intents", async (req, res) => {
+app.post("/api/payment_intents", async (req, res) => {
   try {
     const { options } = req.body;
     const paymentIntent = await stripe.paymentIntents.create(options);

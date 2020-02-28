@@ -22,7 +22,7 @@
     "node": "12.x"
   },
   "scripts": {
-    "start-both": "bash ./start-all.sh",
+    "dev": "bash ./start-all.sh",
     "start-server": "node server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",

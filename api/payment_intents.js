@@ -1,7 +1,7 @@
 const Stripe = require('stripe')
 const secretKey = process.env.SECRET_KEY
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
   if (!secretKey) {
     throw new Error('Stripe secret key required')
   }
