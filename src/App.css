@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.CheckoutForm {
+  padding-top:30px;
+}
+
+    h1 {
+      color: #32325d;
+      font-weight: 400;
+      line-height: 50px;
+      font-size: 40px;
+      margin: 20px 0;
+      padding: 0;
+    }
+
+    .Checkout {
+      margin: 0 auto;
+      max-width: 800px;
+      box-sizing: border-box;
+      padding: 0 5px;
+    }
+
+    label {
+      color: #6b7c93;
+      font-weight: 300;
+      letter-spacing: 0.025em;
+    }
+
+/*     form {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 3px solid #e6ebf1;
+    } */
+
+
+/*     button:hover {
+      color: #fff;
+      cursor: pointer;
+      background-color: #7795f8;
+      transform: translateY(-1px);
+      box-shadow: 0 7px 14px rgba(50, 50, 93, .10), 0 3px 6px rgba(0, 0, 0, .08);
+    } */
+
+    .CheckoutForm input,
+    .StripeElement {
+      display: block;
+      margin: 10px 0 20px 0;
+      max-width: 500px;
+      padding: 10px 14px;
+      font-size: 1em;
+      font-family: 'Source Code Pro', monospace;
+      box-shadow: rgba(50, 50, 93, 0.14902) 0px 1px 3px, rgba(0, 0, 0, 0.0196078) 0px 1px 0px;
+      border: 0;
+      outline: 0;
+      border-radius: 4px;
+      background: white;
+    }
+
+    .CheckoutForm input::placeholder {
+      color: #aab7c4;
+    }
+
+    .CheckoutForm input:focus,
+    .StripeElement--focus {
+      box-shadow: rgba(50, 50, 93, 0.109804) 0px 4px 6px, rgba(0, 0, 0, 0.0784314) 0px 1px 3px;
+      -webkit-transition: all 150ms ease;
+      transition: all 150ms ease;
+    }
+
+    .StripeElement.IdealBankElement,
+    .StripeElement.PaymentRequestButton {
+      padding: 0;
+    }
+
