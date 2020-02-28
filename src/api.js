@@ -1,6 +1,6 @@
 const createPaymentIntent = (options) => {
   return window
-    .fetch(`/payment_intents`, {
+    .fetch(`api/payment_intents`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
