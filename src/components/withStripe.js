@@ -5,7 +5,7 @@ import {
   Elements,
 } from 'react-stripe-elements';
 
-const APIKEY = process.env.PUBLISHABLE_KEY || "pk_test_RBm2ygIjc7dTtTRgicMho96a"
+const APIKEY = process.env.REACT_APP_PUBLISHABLE_KEY || "pk_test_RBm2ygIjc7dTtTRgicMho96a"
 const isStripeLoaded = () => typeof window !== 'undefined' && 'Stripe' in window
 const loadStripe = async () =>
   new Promise(resolve =>

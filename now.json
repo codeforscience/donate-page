@@ -2,5 +2,10 @@
   "env": {
     "PUBLISHABLE_KEY": "@publishable_key",
     "SECRET_KEY": "@secret_key"
+  },
+  "build": {
+    "env": {
+      "REACT_APP_PUBLISHABLE_KEY": "@publishable_key"
+    }
   }
 }
